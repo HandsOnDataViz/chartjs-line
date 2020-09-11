@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Chart.js Line Chart Template by handsondataviz.org</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <!-- Load jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+    <!-- Load Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+    <script src="https://unpkg.com/chartjs-plugin-colorschemes@0.4.0/dist/chartjs-plugin-colorschemes.min.js"></script>
+
+    <!-- Load PapaParse to read csv files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
+  </head>
+
+  <body>
+
+    <div>
+      <canvas id="chart-container" style="height: 400px; width: 100%"></canvas>
+    </div>
+    
+    <p style="font-family: Helvetica; color: #333; padding: 1em 2em; font-size: 12px">
+      Source: CT Department of Education
+      <br>
+      <a href="./data.csv">Download data</a> powering this visualization.
+    </p>
+
+    <script src="script.js"></script>
+
+  </body>
+
+</html>
