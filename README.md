@@ -56,7 +56,7 @@ before monetary values, modify callbacks, such as this:
 
 ```javascript
 callback: function(value, index, values) {
-  return `$` + value.toLocaleString();
+  return '$' + value.toLocaleString();
 }
 ```
 
