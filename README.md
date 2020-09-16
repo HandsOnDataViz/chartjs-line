@@ -8,13 +8,15 @@ https://handsondataviz.github.io/chartjs-line/
 Sample data by CT Department of Education.
 
 ## Create your own
-See chapter 10: Chart.js and Highcharts templates in [Hands-On Data Visualization](https://handsondataviz.org) by Jack Dougherty and Ilya Ilyankou
+See chapter 10: Chart.js and Highcharts templates in [Hands-On Data Visualization](https://handsondataviz.org) by Jack Dougherty and Ilya Ilyankou.
 
 In `data.csv`, each row is a point in time (x-axis). Each column is a new series.
 There can be any number of points in time (rows) and any number of series (columns).
 
 The first column is always labels for the x-axis. Second and all other
 columns are new series (lines), whose label is taken from the first row (header).
+
+You can modify source and credits (lines that appear below the chart) in `index.html`.
 
 In `script.js`, you can customize the values of variables shown in the code snippet below. For more customization, see [Chart.js documentation](https://www.chartjs.org/docs/latest/).
 
@@ -28,6 +30,34 @@ var BEGIN_AT_ZERO = false;  // Should x-axis start from 0? `true` or `false`
 
 var SHOW_GRID = true; // `true` to show the grid, `false` to hide
 var SHOW_LEGEND = true; // `true` to show the legend, `false` to hide
+```
+
+**Colors** are assigned to lines automatically based on a qualitative color scheme
+from [ColorBrewer](https://colorbrewer2.org/). The example contains 5 lines,
+so a color scheme with 5 colors was chosen. Based on your data, you can choose your color
+scheme at the bottom of `script.js` from any of the following:
+https://nagix.github.io/chartjs-plugin-colorschemes/colorchart.html
+
+```javascript
+colorschemes: {
+  /*
+    Replace below with any other color scheme from
+    https://nagix.github.io/chartjs-plugin-colorschemes/colorchart.html
+   */
+  scheme: 'brewer.DarkTwo5'
+}
+```
+
+If you want to **make your Y-axis scale more granular** with more ticks, [consider increasing
+`maxTicksLimit` value](https://github.com/HandsOnDataViz/chartjs-line/blob/master/script.js#L78).
+
+To change how values appear in the tooltip or on x- and y- axes, for example to add a dollar sign `$`
+before monetary values, modify callbacks, such as this:
+
+```javascript
+callback: function(value, index, values) {
+  return `$` + value.toLocaleString();
+}
 ```
 
 ## Why am I not seeing my chart when I open `index.html` in the browser?

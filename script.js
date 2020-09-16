@@ -3,7 +3,7 @@ var TITLE = 'Hartford School District is No Longer the Largest in Connecticut';
 var X_AXIS = 'Academic Year';  // x-axis label and label in tooltip
 var Y_AXIS = 'Number of Students'; // y-axis label and label in tooltip
 
-var BEGIN_AT_ZERO = false;  // Should x-axis start from 0? `true` or `false`
+var BEGIN_AT_ZERO = false;  // Should y-axis start from 0? `true` or `false`
 
 var SHOW_GRID = true; // `true` to show the grid, `false` to hide
 var SHOW_LEGEND = true; // `true` to show the legend, `false` to hide
@@ -59,6 +59,7 @@ $(document).ready(function() {
               display: SHOW_GRID,
             },
             ticks: {
+              maxTicksLimit: 10,
               callback: function(value, index, values) {
                 return value.toLocaleString();
               }
@@ -74,6 +75,7 @@ $(document).ready(function() {
               display: SHOW_GRID,
             },
             ticks: {
+              maxTicksLimit: 10,
               beginAtZero: BEGIN_AT_ZERO,
               callback: function(value, index, values) {
                 return value.toLocaleString()
@@ -92,7 +94,11 @@ $(document).ready(function() {
         },
         plugins: {
           colorschemes: {
-            scheme: 'brewer.Paired12'
+            /*
+              Replace below with any other scheme from
+              https://nagix.github.io/chartjs-plugin-colorschemes/colorchart.html
+            */
+            scheme: 'brewer.DarkTwo5'
           }
         }
       }
