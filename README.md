@@ -21,15 +21,22 @@ You can modify source and credits (lines that appear below the chart) in `index.
 In `script.js`, you can customize the values of variables shown in the code snippet below. For more customization, see [Chart.js documentation](https://www.chartjs.org/docs/latest/).
 
 ```javascript
-var TITLE = 'Hartford School District is No Longer the Largest in Connecticut';
+var TITLE = 'Hartford School District is No Longer Largest in Connecticut';
 
-var X_AXIS = 'Academic Year';  // x-axis label and label in tooltip
-var Y_AXIS = 'Number of Students'; // y-axis label and label in tooltip
+// x-axis label and label in tooltip
+var X_AXIS = 'Academic Year';
 
-var BEGIN_AT_ZERO = false;  // Should x-axis start from 0? `true` or `false`
+// y-axis label and label in tooltip
+var Y_AXIS = 'Number of Students'; 
 
-var SHOW_GRID = true; // `true` to show the grid, `false` to hide
-var SHOW_LEGEND = true; // `true` to show the legend, `false` to hide
+// Should y-axis start from 0? `true` or `false`
+var BEGIN_AT_ZERO = false;
+
+// `true` to show the grid, `false` to hide
+var SHOW_GRID = true;
+
+ // `true` to show the legend, `false` to hide
+var SHOW_LEGEND = true;
 ```
 
 **Colors** are assigned to lines automatically based on a qualitative color scheme
