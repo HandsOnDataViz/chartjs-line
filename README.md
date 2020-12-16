@@ -67,6 +67,10 @@ callback: function(value, index, values) {
 }
 ```
 
+## Turn a line chart into a stacked area chart
+
+To change a Chart.js line chart into a stacked area chart, make sure each `dataset` comes with a `fill: true` property, and that yAxis `stacked` property is set to `true`.
+
 ## Why am I not seeing my chart when I open `index.html` in the browser?
 This error is known as cross-origin request error. When you double-click the file to open locally in your browser, you will see the URL in the address bar starting with `file:`, and all attempts to read a local CSV file, even though it is located in the same folder, will fail.
 
