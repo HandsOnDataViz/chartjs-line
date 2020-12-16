@@ -73,6 +73,7 @@ $(document).ready(function() {
             }
           }],
           yAxes: [{
+            stacked: false, // `true` for stacked area chart, `false` otherwise
             beginAtZero: true,
             scaleLabel: {
               display: Y_AXIS !== '',
